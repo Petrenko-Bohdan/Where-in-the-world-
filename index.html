@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+		<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+		<script type="module" src="js/main.js"></script>
+		<div class="wrapper">
+			<header class="header">
+				<h2 class="header--text">
+					<a href="/" class="header--link">
+						<p class="header--link-text">Where in the world?</p>						
+					</a>
+				</h2>
+				<div>
+					<input type="checkbox" id="switchInput" class="switch--input">
+					<label for="switchInput" class="switch--label"></label>
+				</div>
+			</header>
+			<main>
+				<div class="search-filter-container">
+					<div id="searchContainer" class="search--container">
+						<input type="text" class="search-input" placeholder="Search for a country">
+					</div>
+					<select name="" id="filterContainer" class="filter--container">
+						<option hidden value="all" class="filter--region">ALL</option>
+						<option value="Africa" class="filter--region">Africa</option>
+						<option value="America" class="filter--region">America</option>
+						<option value="Asia" class="filter--region">Asia</option>
+						<option value="Europe" class="filter--region">Europe</option>
+						<option value="Oceania" class="filter--region">Oceania</option>
+					</select>
+				</div>
+				<div class="countries--container" id="countriesContainer">					
+			</main>
+		</div>
+		<script type="module" src="js/switchInput.js"></script>
+  </body>
+</html>

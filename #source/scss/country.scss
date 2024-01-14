@@ -1,0 +1,70 @@
+@import "variables.scss";
+@import "switch-input.scss";
+@import "main.scss";
+
+.country--container {
+  margin-top: 32px;
+}
+
+.back--button {
+	width: 100px;
+  margin-top: 20px;
+  padding: 6px ;
+  cursor: pointer;
+	color: var(--color);
+}
+
+.country--page {
+  max-width: 1200px;
+  display: flex;
+  gap: 64px;
+  overflow: hidden;
+}
+
+.country-page-flag {
+  max-width: 40%;
+}
+
+.country-page-container {
+  width: 100%;
+}
+
+.country-page-title {
+	color: var(--color);
+}
+
+.country-page-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  column-gap: 10px;
+  max-height: 180px;
+  flex-wrap: wrap;
+	color: var(--color);
+
+  p {
+    margin: 0;
+    max-width: 300px;
+  }
+}
+
+
+.border-countries {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 36px;
+	color: var(--color);
+
+  b {
+    margin-right: 5px;
+  }
+}
+
+.border-countries-link {
+  color: var(--color);
+
+  &:hover {
+    color: red;
+  }
+}

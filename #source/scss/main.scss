@@ -1,0 +1,151 @@
+@import "main.scss";
+@import "variables.scss";
+@import "switch-input.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: #102a42;
+}
+
+body {
+  display: grid;
+	min-height: 100vh;
+	margin: 0 auto;
+	background-color: var(--background-color);
+	place-items: center; 
+  line-height: 1.5;
+  font-size: $font-size-sm;  
+   
+  &.dark {
+    --background-color: hsl(207, 26%, 17%);
+    --color: white;
+    --elements-color: hsl(209, 23%, 22%);
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+img {
+  display: block;
+}
+
+button {
+  background: transparent;
+  border: 0;
+}
+
+section {
+  box-sizing: border-box;
+}
+
+.wrapper {
+	display: grid;
+  grid-template: minmax(auto, 80px) minmax(auto, 80px) auto minmax(auto, 80px) / 1fr;
+	max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 50px;
+	background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+  padding-inline: 24px;
+}
+
+.header--link {
+  color: var(--color);
+}
+
+.search-filter-container {
+	display: flex;
+  justify-content: space-between;
+  margin: 16px;
+}
+
+.search-input {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.search-input::placeholder,
+textarea::placeholder {
+  color: var(--color);
+}
+
+.search-input ::placeholder {
+  color: red;
+}
+
+.filter--container {
+  background-color: var(--elements-color);
+  color: var(--color);
+}
+
+.filter--region {
+  background-color: var(--background-color);
+  color: var(--color)
+}
+
+.countries--container {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;  
+  gap: 60px;  
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.country--card {
+  display: inline-block;
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(--elements-color);
+  
+  &:hover {
+    transform: scale(1.03);
+
+    .country--name {
+      color: red;
+    }
+  }
+}
+
+.country--flag {
+  width: 100%;
+}
+
+.country--content {
+  margin-left: 10px;
+}
+
+.country--content-item {
+  margin: 5px 0;
+  color: var(--color);
+}
+
+.country--name {
+  font-size: 24px;
+  margin: 10px 0;
+}
